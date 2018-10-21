@@ -1,0 +1,8 @@
+<h2>todo</h2>
+ 
+{% for x in items %}
+<p>{{ x.title }} - {{ x.due_date }}</p>
+ 
+<p>{{ x.description }}</p>
+<hr />
+{% endfor %}
