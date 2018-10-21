@@ -46,7 +46,7 @@ INSTALLED_APPS = [
 CORS_ORIGIN_WHITELIST = (
     u'localhost:8080',
     u'todo-app-django.herokuapp.com',
-    u'http://windlessstorm.github.io',
+    u'windlessstorm.github.io',
 )
 
 MIDDLEWARE = [
