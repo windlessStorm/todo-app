@@ -26,7 +26,7 @@ SECRET_KEY = 'bnf3r_*ku)76lh(iynqed5q@$lq=8k1dm3we8$=nzt$wtri7av'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['todo-app-django.herokuapp.com']
+ALLOWED_HOSTS = [u'todo-app-django.herokuapp.com']
 
 
 # Application definition
@@ -44,8 +44,8 @@ INSTALLED_APPS = [
 ]
 
 CORS_ORIGIN_WHITELIST = (
-    'localhost:8080',
-    'todo-app-django.herokuapp.com',
+    u'localhost:8080',
+    u'todo-app-django.herokuapp.com',
 )
 
 MIDDLEWARE = [
