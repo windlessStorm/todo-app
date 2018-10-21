@@ -154,7 +154,7 @@ import axios from 'axios'
 import moment from 'moment'
 import addTask from '@/components/addTask'
 
-let backendUrl = 'http://localhost:8000'
+let backendUrl = 'https://todo-app-django.herokuapp.com'
 
 export default {
   components: {

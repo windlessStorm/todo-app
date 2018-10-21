@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 CORS_ORIGIN_WHITELIST = (
     u'localhost:8080',
     u'todo-app-django.herokuapp.com',
+    u'http://windlessstorm.github.io',
 )
 
 MIDDLEWARE = [
@@ -83,6 +84,8 @@ WSGI_APPLICATION = 'todobackend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
+'''
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -93,7 +96,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
+'''
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
