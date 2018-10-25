@@ -154,15 +154,16 @@ import axios from 'axios'
 import moment from 'moment'
 import addTask from '@/components/addTask'
 
-let backendUrl = 'https://todo-app-django.herokuapp.com'
+// let backendUrl = 'https://todo-app-django.herokuapp.com'
+let backendUrl = 'http://localhost:8000'
 
 export default {
   components: {
     addTask
   },
   data: () => ({
-    tasklist: {},
-    displaylist: {},
+    tasklist: [],
+    displaylist: [],
     selectedTab: 'todo',
     currentFilter: 'All',
     filterlist: ['All', 'Due Today', 'Due this week', 'Due next week', 'Overdue'],
@@ -176,7 +177,7 @@ export default {
     search: false,
     searchTerm: null
   }),
-  mounted () {
+  created () {
     axios.get(backendUrl + '/api/v1/task/?format=json')
       .then((response) => {
         console.log(response.data.objects)
@@ -185,8 +186,8 @@ export default {
       })
   },
   methods: {
-    selectFilter (filter) {
-      this.currentFilter = filter
+    selectFilter () {
+      let filter = this.currentFilter
       if (filter === 'All') {
         this.showTodo()
       } else if (filter === 'Due Today') {
@@ -203,7 +204,7 @@ export default {
     selectTab (tabname) {
       this.selectedTab = tabname
       if (this.selectedTab === 'todo') {
-        this.selectFilter(this.currentFilter)
+        this.selectFilter()
         console.log(this.displaylist)
       } else if (this.selectedTab === 'completed') {
         this.showCompleted()
@@ -292,7 +293,8 @@ export default {
       axios.put(
         backendUrl + resourceUri,
         {
-          soft_deleted: true
+          soft_deleted: true,
+          delete_time: moment().format('YYYY-MM-DD')
         }
       ).then(
         this.getAllTasks()
@@ -319,7 +321,7 @@ export default {
     getAllTasks () {
       axios.get(backendUrl + '/api/v1/task/?format=json')
         .then((response) => {
-          console.log(response.data.objects)
+          // console.log(response.data.objects)
           this.tasklist = response.data.objects
           if (this.selectedTab === 'todo') {
             this.selectTab('todo')

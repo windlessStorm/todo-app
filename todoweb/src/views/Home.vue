@@ -10,7 +10,7 @@
             </small>
           </footer>
         </blockquote>
-        <v-btn class='mt-5' outline color="indigo" large :to="{path: '/tasks4'}">Go to Tasks</v-btn>
+        <v-btn class='mt-5' outline color="indigo" large :to="{path: '/tasks'}">Go to Tasks</v-btn>
       </v-layout>
   </v-container>
 </template>

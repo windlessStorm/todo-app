@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import Tasks4 from './views/Tasks4.vue'
+import Tasks from './views/Tasks.vue'
 
 Vue.use(Router)
 
@@ -21,9 +21,9 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
     },
     {
-      path: '/tasks4',
-      name: 'tasks4',
-      component: Tasks4
+      path: '/tasks',
+      name: 'tasks',
+      component: Tasks
     }
   ]
 })
