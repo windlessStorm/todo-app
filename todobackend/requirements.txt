@@ -12,7 +12,7 @@ colorama==0.3.9
 configparser==3.5.0
 cryptography==2.3
 defusedxml==0.5.0
-Django==1.11.16
+Django==1.11.28
 django-cors-headers==2.4.0
 django-tastypie==0.14.2
 docker==3.4.1
