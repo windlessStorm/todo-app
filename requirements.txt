@@ -12,7 +12,7 @@ colorama==0.3.9
 configparser==3.5.0
 cryptography==2.3
 dj-database-url==0.5.0
-Django==1.11.16
+Django==1.11.29
 django-cors-headers==2.4.0
 django-heroku==0.3.1
 django-tastypie==0.14.2
