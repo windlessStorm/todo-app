@@ -46,7 +46,7 @@ robotframework==3.0.4
 selenium==3.13.0
 singledispatch==3.4.0.3
 six==1.11.0
-urllib3==1.23
+urllib3==1.26.5
 websocket-client==0.48.0
 win10toast==0.9
 WMI==1.4.9
